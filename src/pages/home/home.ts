@@ -20,7 +20,7 @@ export class HomePage {
       prompt: 'Hora de scanear!'
     }
     
-    const results = await this.barcode.scan(options);
+    this.results = await this.barcode.scan(options);
   }
 
 }
