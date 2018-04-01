@@ -1,0 +1,8 @@
+{
+  "name": "meu-bolso",
+  "app_id": "b7b3e93f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
