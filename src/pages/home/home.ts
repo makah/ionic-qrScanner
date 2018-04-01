@@ -17,7 +17,8 @@ export class HomePage {
   async scanBarcode() {
     
     let options: BarcodeScannerOptions = {
-      prompt: 'Hora de scanear!'
+      prompt: 'Hora de scanear!',
+      formats : "QR_CODE"
     }
     
     this.results = await this.barcode.scan(options);
