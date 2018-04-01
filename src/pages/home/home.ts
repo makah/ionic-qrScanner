@@ -21,7 +21,6 @@ export class HomePage {
     }
     
     const results = await this.barcode.scan(options);
-    console.log(results);
   }
 
 }
