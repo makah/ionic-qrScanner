@@ -23,7 +23,7 @@ export class HomePage {
 
   qrscanner() {
     
-    alert('QRS = ' + window.QRScanner);
+    alert('Teste1');
     this.qrScanner.getStatus().then(function(status){
       
     alert("status = " + status);
