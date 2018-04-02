@@ -23,9 +23,14 @@ export class HomePage {
 
   qrscanner() {
     
+    alert('QRS = ', window.QRScanner);
+    
     // Optionally request the permission early
     this.qrScanner.prepare()
       .then((status: QRScannerStatus) => {
+        
+        alert('preparado!');
+        
         if (status.authorized) {
           // camera permission was granted
           alert('authorized');
