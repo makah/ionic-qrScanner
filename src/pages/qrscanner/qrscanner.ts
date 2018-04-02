@@ -3,22 +3,18 @@ import { NavController } from 'ionic-angular';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
-import { QrscannerPage } from '../qrscanner/qrscanner';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'qrscanner.html'
 })
-export class HomePage {
-  
+export class QrscannerPage {
+
   constructor(public navCtrl: NavController,
               public androidPermissions: AndroidPermissions,
               public qrScanner: QRScanner) {
-
-  }
-
-  push() {
-    this.navCtrl.push(QrscannerPage);
+                
+                this.qrscanner();
   }
 
   qrscanner() {
@@ -36,6 +32,7 @@ export class HomePage {
             alert(text);
             this.qrScanner.hide(); // hide camera preview
             scanSub.unsubscribe(); // stop scanning
+            this.navCtrl.pop();
           });
 
           this.qrScanner.resumePreview();
