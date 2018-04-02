@@ -6,13 +6,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
-  <div *ngIf="results">
-    <p>{{results.text}}</p>
-    <p>{{results.format}}</p>
-    <p>{{results.cancelled}}</p>
-  </div>
-  
-  <button ion-button (click)="scanBarcode()">Scan Me</button>
-</ion-content>
+<ion-content padding="">
+  <button ion-button (click)="qrscanner()">qrscanner</button>
+  <button ion-button (click)="push()">push</button>
+</ion-content>  
