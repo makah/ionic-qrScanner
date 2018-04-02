@@ -89,4 +89,5 @@
     <engine name="browser" spec="~5.0.3" />
     <plugin name="cordova-plugin-qrscanner" spec="^2.5.0" />
     <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.2" />
 </widget>

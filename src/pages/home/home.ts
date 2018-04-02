@@ -61,7 +61,7 @@ export class HomePage {
         }
       })
       .catch((e: any) => {
-        alert('Error is' + e);
+        alert('Error is: ' + e);
       });
 
   }
