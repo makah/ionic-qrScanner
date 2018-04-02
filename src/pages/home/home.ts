@@ -23,7 +23,10 @@ export class HomePage {
 
   qrscanner() {
     
-    alert('QRS = ', window.QRScanner);
+    alert('QRS = ' + window.QRScanner);
+    this.qrScanner.getStatus().then(function(status){
+      
+    alert("status = " + status);
     
     // Optionally request the permission early
     this.qrScanner.prepare()
@@ -41,6 +44,8 @@ export class HomePage {
             alert(text);
             this.qrScanner.hide(); // hide camera preview
             scanSub.unsubscribe(); // stop scanning
+            
+            //this.qrScanner.destroy();
           });
 
           this.qrScanner.resumePreview();
@@ -68,6 +73,8 @@ export class HomePage {
       .catch((e: any) => {
         alert('Error is: ' + e);
       });
+      
+    });
 
   }
 
