@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 
+
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
@@ -15,9 +16,11 @@ export class QrscannerPage {
               public androidPermissions: AndroidPermissions,
               public qrScanner: QRScanner) {
                 
+                // solve the problem - "plugin not installed".
                 platform.ready().then(()=>{
                   this.qrscanner();
                 })
+                
   }
 
   qrscanner() {
