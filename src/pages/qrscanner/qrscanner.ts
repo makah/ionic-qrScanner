@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
@@ -11,10 +11,13 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 export class QrscannerPage {
 
   constructor(public navCtrl: NavController,
+              public platform:Platform,
               public androidPermissions: AndroidPermissions,
               public qrScanner: QRScanner) {
                 
-                this.qrscanner();
+                platform.ready().then(()=>{
+                  this.qrscanner();
+                })
   }
 
   qrscanner() {

@@ -20,13 +20,17 @@ export class HomePage {
   push() {
     this.navCtrl.push(QrscannerPage);
   }
+  
+  getStatus() {
+    this.qrScanner.getStatus().then(function(status){
+      alert("status = " + status);
+    });
+  }
 
   qrscanner() {
     
     alert('Teste1');
-    this.qrScanner.getStatus().then(function(status){
-      
-    alert("status = " + status);
+    
     
     // Optionally request the permission early
     this.qrScanner.prepare()
@@ -73,8 +77,7 @@ export class HomePage {
       .catch((e: any) => {
         alert('Error is: ' + e);
       });
-      
-    });
+    
 
   }
 
