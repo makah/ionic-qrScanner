@@ -12,7 +12,7 @@ import { QrscannerPage } from '../qrscanner/qrscanner';
 export class HomePage {
 
   constructor(public navCtrl: NavController,
-    public platform:Platform,
+    public platform: Platform,
     public androidPermissions: AndroidPermissions,
     public qrScanner: QRScanner) {
 
